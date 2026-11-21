@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: promotions-db
+    environment:
+      POSTGRES_DB: promotions
+      POSTGRES_USER: promo
+      POSTGRES_PASSWORD: promo
+    ports:
+      - "5433:5432"
+    volumes:
+      - promotions-data:/var/lib/postgresql/data
+
+volumes:
+  promotions-data:
