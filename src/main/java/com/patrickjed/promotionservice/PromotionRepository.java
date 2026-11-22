@@ -12,3 +12,5 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
     List<Promotion> findByActiveTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
             LocalDate startOnOrBefore, LocalDate endOnOrAfter);
 }
+
+
